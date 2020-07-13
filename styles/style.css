@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --color-green: hsl(163, 72%, 41%);
+  --color-red: hsl(356, 69%, 56%);
+  --color-facebook: hsl(208, 92%, 53%);
+  --color-twitter: hsl(203, 89%, 53%);
+  --color-instagram: linear-gradient(
+    90deg,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+  --color-youtube: hsl(348, 97%, 39%);
+
+  /**/
+  --toggle-dark: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --toggle-light: hsl(230, 22%, 74%);
+
+  /*dark theme*/
+  --bg-dark: hsl(230, 17%, 14%);
+  --pattern-dark: hsl(232, 19%, 15%);
+  --card-bg-dark: hsl(228, 28%, 20%);
+  --text-dark: hsl(228, 34%, 66%);
+  --titles-dark: #fff;
+
+  /*light theme*/
+  --bg-light: hsl(0, 0%, 100%);
+  --pattern-light: hsl(225, 100%, 98%);
+  --card-bg-light: hsl(227, 47%, 96%);
+  --text-light: hsl(230, 17%, 14%);
+  --titles-light: #000;
+
+  /*theme*/
+  --bg: var(--bg-light);
+  --pattern: var(--pattern-light);
+  --card-bg: var(--card-bg-light);
+  --text: var(--text-light);
+  --toggle: var(--toggle-light);
+  --titles: var(--titles-light);
+}
+
+* {
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  font-size: 14px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2 {
+  color: var(--titles);
+  font-size: 20px;
+}
+
+header {
+  padding: 16px;
+  width: 100%;
+  background: var(--pattern);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 180px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: start;
+  gap: 16px;
+}
+
+.text-head {
+  font-size: 20px;
+  line-height: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 16px;
+  position: relative;
+  top: -50px;
+  margin: auto;
+}
+
+.overview-general {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 16px;
+  width: 100%;
+}
+
+.switch-theme {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch-button {
+  background: var(--toggle);
+  width: 40px;
+  height: 20px;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.switch-button::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: var(--pattern);
+  position: absolute;
+  border-radius: 50%;
+  top: 2px;
+  right: 2px;
+}
+
+.switch-button.active::after {
+  left: 2px;
+  right: auto;
+}
+
+/* card */
+.card {
+  background: var(--card-bg);
+  height: 200px;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 12px;
+}
+
+.top-line {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.top-line.fb {
+  background: var(--color-facebook);
+}
+
+.top-line.tw {
+  background: var(--color-twitter);
+}
+
+.top-line.ig {
+  background: var(--color-instagram);
+}
+
+.top-line.yt {
+  background: var(--color-youtube);
+}
+
+.social-info {
+  display: flex;
+  align-items: center;
+}
+
+img.icon-social {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.followers {
+  margin: 12px;
+}
+
+.followers h1 {
+  margin: 0;
+  font-size: 48px;
+}
+
+.followers p {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.followers-today {
+  color: var(--color-green);
+  font-weight: 700;
+}
+
+.overview-today {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.card-today {
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card-today div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-today div:first-child {
+  margin-bottom: 24px;
+}
+
+.card-today div h1,
+p {
+  margin: 0;
+}
+
+@media screen and (min-width: 425px) {
+  .container {
+    max-width: 600px;
+  }
+
+  .overview-general {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .overview-today {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .switch-theme {
+    justify-content: flex-end;
+  }
+
+  .switch-theme p {
+    margin-right: 8px;
+  }
+
+  .overview-general {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .overview-today {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
