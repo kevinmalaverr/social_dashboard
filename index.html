@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" />
     <title>Document</title>
   </head>
   <body>
     <header>
-      <div>
-        <h1 class="text-head">Social Media Dashboard</h1>
-        <p>Total Followers: 23,004</p>
-      </div>
-      <div class="switch-theme">
-        <p>Dark Mode</p>
-        <div id="button" class="switch-button"></div>
+      <div class="header-wrapper">
+        <div>
+          <h1 class="text-head">Social Media Dashboard</h1>
+          <p>Total Followers: 23,004</p>
+        </div>
+        <div class="switch-theme">
+          <p>Dark Mode</p>
+          <div id="button" class="switch-button"></div>
+        </div>
       </div>
     </header>
     <div class="container">
@@ -31,8 +34,8 @@
             </h1>
             <p>FOLLOWERS</p>
           </div>
-          <div class="followers-today">
-            <p>+81 Today</p>
+          <div class="followers-today up">
+            <p>12 Today</p>
           </div>
         </div>
         <div class="card">
@@ -43,12 +46,12 @@
           </div>
           <div class="followers">
             <h1>
-              1987
+              1044
             </h1>
             <p>FOLLOWERS</p>
           </div>
-          <div class="followers-today">
-            <p>+81 Today</p>
+          <div class="followers-today up">
+            <p>99 Today</p>
           </div>
         </div>
         <div class="card">
@@ -59,28 +62,28 @@
           </div>
           <div class="followers">
             <h1>
-              1987
+              11k
             </h1>
             <p>FOLLOWERS</p>
           </div>
-          <div class="followers-today">
-            <p>+81 Today</p>
+          <div class="followers-today up">
+            <p>1099 Today</p>
           </div>
         </div>
         <div class="card">
           <div class="top-line yt"></div>
           <div class="social-info">
             <img src="images/icon-youtube.svg" alt="" class="icon-social" />
-            <p>@username</p>
+            <p>username</p>
           </div>
           <div class="followers">
             <h1>
-              1987
+              8239
             </h1>
-            <p>FOLLOWERS</p>
+            <p>SUBSCRIBERS</p>
           </div>
-          <div class="followers-today">
-            <p>+81 Today</p>
+          <div class="followers-today down">
+            <p>144 Today</p>
           </div>
         </div>
       </div>
@@ -93,67 +96,93 @@
           </div>
           <div>
             <h1>87</h1>
-            <p>+3%</p>
+            <div class="followers-today up">
+              <p>3%</p>
+            </div>
           </div>
         </div>
         <div class="card-today">
           <div>
-            <p>Page Views</p>
+            <p>Likes</p>
             <img class="icon-social" src="images/icon-facebook.svg" alt="" />
           </div>
           <div>
             <h1>87</h1>
-            <p>+3%</p>
+            <div class="followers-today down">
+              <p>2%</p>
+            </div>
           </div>
         </div>
         <div class="card-today">
           <div>
-            <p>Page Views</p>
-            <img class="icon-social" src="images/icon-facebook.svg" alt="" />
+            <p>Likes</p>
+            <img class="icon-social" src="images/icon-instagram.svg" alt="" />
           </div>
           <div>
-            <h1>87</h1>
-            <p>+3%</p>
-          </div>
-        </div>
-        <div class="card-today">
-          <div>
-            <p>Page Views</p>
-            <img class="icon-social" src="images/icon-facebook.svg" alt="" />
-          </div>
-          <div>
-            <h1>87</h1>
-            <p>+3%</p>
+            <h1>5462</h1>
+            <div class="followers-today up">
+              <p>2257%</p>
+            </div>
           </div>
         </div>
         <div class="card-today">
           <div>
-            <p>Page Views</p>
-            <img class="icon-social" src="images/icon-facebook.svg" alt="" />
+            <p>Profile Views</p>
+            <img class="icon-social" src="images/icon-instagram.svg" alt="" />
           </div>
           <div>
-            <h1>87</h1>
-            <p>+3%</p>
-          </div>
-        </div>
-        <div class="card-today">
-          <div>
-            <p>Page Views</p>
-            <img class="icon-social" src="images/icon-facebook.svg" alt="" />
-          </div>
-          <div>
-            <h1>87</h1>
-            <p>+3%</p>
+            <h1>52k</h1>
+            <div class="followers-today up">
+              <p>1375%</p>
+            </div>
           </div>
         </div>
         <div class="card-today">
           <div>
-            <p>Page Views</p>
-            <img class="icon-social" src="images/icon-facebook.svg" alt="" />
+            <p>Retweets</p>
+            <img class="icon-social" src="images/icon-twitter.svg" alt="" />
           </div>
           <div>
-            <h1>87</h1>
-            <p>+3%</p>
+            <h1>117</h1>
+            <div class="followers-today up">
+              <p>303%</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-today">
+          <div>
+            <p>Likes</p>
+            <img class="icon-social" src="images/icon-twitter.svg" alt="" />
+          </div>
+          <div>
+            <h1>507</h1>
+            <div class="followers-today up">
+              <p>553%</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-today">
+          <div>
+            <p>Likes</p>
+            <img class="icon-social" src="images/icon-youtube.svg" alt="" />
+          </div>
+          <div>
+            <h1>117</h1>
+            <div class="followers-today down">
+              <p>303%</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-today">
+          <div>
+            <p>Total Views</p>
+            <img class="icon-social" src="images/icon-youtube.svg" alt="" />
+          </div>
+          <div>
+            <h1>117</h1>
+            <div class="followers-today down">
+              <p>303%</p>
+            </div>
           </div>
         </div>
       </div>
